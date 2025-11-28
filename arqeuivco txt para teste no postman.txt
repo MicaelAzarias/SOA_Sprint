@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "b3e54611-habitoplus-collection",
+		"name": "HabitoPlus API - Testes",
+		"description": "Collection para validação dos endpoints do projeto HábitoPlus.",
+		"schema": "[https://schema.getpostman.com/json/collection/v2.1.0/collection.json](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)"
+	},
+	"item": [
+		{
+			"name": "1. Health Check (Status)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/habitos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"habitos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Registrar Hábito (Sucesso)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"colaboradorId\": \"COLAB_01\",\n  \"tipoAtividade\": \"CORRIDA\",\n  \"descricao\": \"Corrida de 5km no parque\",\n  \"minutosDuracao\": 45\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/habitos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"habitos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Teste de Validação (Erro Esperado)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"colaboradorId\": \"COLAB_02\",\n  \"tipoAtividade\": \"\"\n  \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/habitos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"habitos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
