@@ -1,11 +1,7 @@
 Integrantes:
-
 Micael Santos Azarias |RM552699
-
 Felipe Megumi NAkama |RM552821
-
 Carolina Cavalli Machado |RM552925
-
 Nathan da Silveira Uflacker |RM553264
 
 
